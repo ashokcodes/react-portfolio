@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #000000;
 }
 
 .App-logo {
@@ -21,6 +22,134 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.mdl-layout__header{
+  background: #141F2D !important;
+}
+
+.mdl-layout__content{
+  background: black;
+}
+
+.mdl-layout__drawer{
+  background: #141F2D !important;
+  border-right-color: #141F2D !important;
+}
+
+.mdl-navigation__link{
+  color: #ddd !important;
+}
+
+.profileCard{
+  background: #141F2D;
+  color: #fff;
+  width: 94%;
+  margin: 3% auto 1.5%;
+  box-sizing: border-box;
+  border: 1px solid rgba(221,221,221,.2);
+  box-shadow: 3px 3px 0px rgba(221,221,221,.2);
+}
+.mdl-layout-title{
+  padding-left: 0 !important;
+  color: #fff;
+}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover{
+  background: #000000 !important;
+}
+.name-menu{
+  text-decoration: none;
+}
+.profileCard img{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.profile-sub-text{
+  color: #ddd;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+}
+.name{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.main-card .mdl-chip{
+  margin: auto 2px;
+}
+
+.main-card{
+  color: #fff;
+  max-width: 94%;
+  width: 94%;
+  margin: 3% auto;
+  box-sizing: border-box;
+  padding: 0 !important;
+}
+.main-card h5{
+  margin: 0;
+  padding: .2rem .5rem;
+  color: #fff;
+  font-style: italic;
+  text-align: left;
+  
+}
+
+.cell-left{
+  margin: 1% 0 !important;
+  background: #141F2D;
+  width: 100% !important;
+  padding: 1rem;
+  border: 1px solid rgba(221,221,221,.2);
+  box-shadow: 3px 3px 0px rgba(221,221,221,.2);
+}
+.cell-right{
+  padding: 1rem;
+  margin: 1% 0 !important;
+  background: #141F2D;
+  width: 100% !important;
+  border: 1px solid rgba(221,221,221,.2);
+  box-shadow: 3px 3px 0px rgba(221,221,221,.2);
+}
+.card-content{
+  text-align: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem; 
+  margin-top: 1rem;
+  padding: .2rem .5rem;
+  color: #ddd;
+}
+.mdl-mini-footer{
+  margin-top: 2rem;
+  background: #141F2D !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .name{
+    text-align: left
+  }
+  
+  .cell-left{
+    width: 32% !important;
+    margin-right: 10px;
+  }
+  .cell-right{
+    width: 67% !important;
+    margin-left: auto !important;
+  }
+  .main-card{
+    width: 850px;
+  }
+  .profileCard{
+    padding: 3rem;
+    max-width: 850px;
+  }
+  .profile-sub-text{
+    text-align: left;
+  }
 }
 
 @keyframes App-logo-spin {
