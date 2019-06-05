@@ -1,0 +1,16 @@
+.privacy-policy-content{
+    color: #ddd;
+    width: 850px;
+    background: #141F2D;
+    margin: 3% auto;
+    padding: 1rem;
+    max-width: 94%;
+    box-sizing: border-box;
+    border: 1px solid rgba(221,221,221,.2);
+    box-shadow: 3px 3px 0px rgba(221,221,221,.2);
+}
+
+.privacy-policy-content p{
+    text-align: justify;
+}
+
