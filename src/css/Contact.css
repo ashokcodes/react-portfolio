@@ -1,0 +1,15 @@
+.contact-content{
+    color: #ddd;
+}
+
+.mdl-textfield__input{
+    border-bottom: 1px solid rgba(221,221,221,.4) !important;
+}
+
+.mdl-textfield__label{
+    color: rgba(221,221,221,.4) !important;
+}
+
+.send-button{
+    background: rgba(221,221,221,.4) !important;
+}
