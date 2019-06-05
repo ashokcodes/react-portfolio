@@ -1,16 +1,24 @@
 import React, { Component } from "react";
-import { Textfield, Button } from "react-mdl";
+import { Textfield, Button, Snackbar } from "react-mdl";
 import "./css/Contact.css";
-
+import axios from "axios";
 
 class Contact extends Component {
     constructor(props) {
         super(props)
-        this.state = { name: "", email: "", message: "" }
+        this.state = { name: "", email: "", message: "", isSnackbarActive: false, isErrorSnackbarActive: false }
         this.updateName = this.updateName.bind(this)
         this.updateEmail = this.updateEmail.bind(this)
         this.updateEmail = this.updateEmail.bind(this)
         this.showInfo = this.showInfo.bind(this)
+        this.handleTimeoutSnackbar = this.handleTimeoutSnackbar.bind(this)
+    }
+
+    handleTimeoutSnackbar() {
+        this.setState({
+            isSnackbarActive: false,
+            isErrorSnackbarActive: false
+        })
     }
 
     updateName(event) {
@@ -32,11 +40,16 @@ class Contact extends Component {
     showInfo() {
         const name = this.state.name
         const email = this.state.email
+
         if (name !== "" && email !== "")
-            alert(this.state.email)
+            axios.get(`https://api.github.com/users/ashokcodes`)
+                .then(response => this.setState({ isSnackbarActive: true }))
+                .catch(error => console.log(error))
+        else this.setState({ isErrorSnackbarActive: true })
     }
 
     render() {
+        const { isSnackbarActive, isErrorSnackbarActive } = this.state
         return (
             <div className="contact-content">
                 <div className="profileCard">
@@ -65,6 +78,14 @@ class Contact extends Component {
                     <Button onClick={this.showInfo} className="send-button" raised ripple>Send!</Button>
                 </div>
                 <div style={{ padding: "170px" }}></div>
+                <Snackbar
+                    active={isSnackbarActive}
+                    onTimeout={this.handleTimeoutSnackbar}
+                >Sent Message!</Snackbar>
+                <Snackbar
+                    active={isErrorSnackbarActive}
+                    onTimeout={this.handleTimeoutSnackbar}
+                >Fill All Fields!</Snackbar>
             </div>
         )
     }
