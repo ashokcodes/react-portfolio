@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import pdf from "./static/ashok-resume.pdf";
 import Main from "./main";
 import { Layout, Navigation, Header, Content, Drawer } from "react-mdl";
 import { Footer, FooterSection, FooterLinkList } from "react-mdl";
@@ -16,7 +17,7 @@ function App() {
           <Drawer title="Menu">
             <Navigation>
               <Link to="/">Home</Link>
-              <Link to="/resume">Resume</Link>
+              <a href={pdf}>Resume</a>
               <Link to="/contact">Contact</Link>
             </Navigation>
           </Drawer>
